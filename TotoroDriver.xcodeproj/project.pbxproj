@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35D38C0119261E1600DD2B9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D38C0019261E1600DD2B9D /* Foundation.framework */; };
+		35D38C0319261E1600DD2B9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D38C0219261E1600DD2B9D /* CoreGraphics.framework */; };
+		35D38C0519261E1600DD2B9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D38C0419261E1600DD2B9D /* UIKit.framework */; };
+		35D38C0B19261E1600DD2B9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35D38C0919261E1600DD2B9D /* InfoPlist.strings */; };
+		35D38C0D19261E1600DD2B9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D38C0C19261E1600DD2B9D /* main.m */; };
+		35D38C1119261E1600DD2B9D /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D38C1019261E1600DD2B9D /* CCAppDelegate.m */; };
+		35D38C1419261E1600DD2B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D38C1219261E1600DD2B9D /* Main.storyboard */; };
+		35D38C1719261E1600DD2B9D /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D38C1619261E1600DD2B9D /* CCViewController.m */; };
+		35D38C1919261E1600DD2B9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D38C1819261E1600DD2B9D /* Images.xcassets */; };
+		35D38C2019261E1600DD2B9D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D38C1F19261E1600DD2B9D /* XCTest.framework */; };
+		35D38C2119261E1600DD2B9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D38C0019261E1600DD2B9D /* Foundation.framework */; };
+		35D38C2219261E1600DD2B9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D38C0419261E1600DD2B9D /* UIKit.framework */; };
+		35D38C2A19261E1600DD2B9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35D38C2819261E1600DD2B9D /* InfoPlist.strings */; };
+		35D38C2C19261E1600DD2B9D /* TotoroDriverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D38C2B19261E1600DD2B9D /* TotoroDriverTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35D38C2319261E1600DD2B9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35D38BF519261E1600DD2B9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35D38BFC19261E1600DD2B9D;
+			remoteInfo = TotoroDriver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35D38BFD19261E1600DD2B9D /* TotoroDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TotoroDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35D38C0019261E1600DD2B9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		35D38C0219261E1600DD2B9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		35D38C0419261E1600DD2B9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		35D38C0819261E1600DD2B9D /* TotoroDriver-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TotoroDriver-Info.plist"; sourceTree = "<group>"; };
+		35D38C0A19261E1600DD2B9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		35D38C0C19261E1600DD2B9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		35D38C0E19261E1600DD2B9D /* TotoroDriver-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TotoroDriver-Prefix.pch"; sourceTree = "<group>"; };
+		35D38C0F19261E1600DD2B9D /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
+		35D38C1019261E1600DD2B9D /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
+		35D38C1319261E1600DD2B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35D38C1519261E1600DD2B9D /* CCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
+		35D38C1619261E1600DD2B9D /* CCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		35D38C1819261E1600DD2B9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		35D38C1E19261E1600DD2B9D /* TotoroDriverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TotoroDriverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35D38C1F19261E1600DD2B9D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		35D38C2719261E1600DD2B9D /* TotoroDriverTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TotoroDriverTests-Info.plist"; sourceTree = "<group>"; };
+		35D38C2919261E1600DD2B9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		35D38C2B19261E1600DD2B9D /* TotoroDriverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TotoroDriverTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35D38BFA19261E1600DD2B9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D38C0319261E1600DD2B9D /* CoreGraphics.framework in Frameworks */,
+				35D38C0519261E1600DD2B9D /* UIKit.framework in Frameworks */,
+				35D38C0119261E1600DD2B9D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35D38C1B19261E1600DD2B9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D38C2019261E1600DD2B9D /* XCTest.framework in Frameworks */,
+				35D38C2219261E1600DD2B9D /* UIKit.framework in Frameworks */,
+				35D38C2119261E1600DD2B9D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35D38BF419261E1600DD2B9D = {
+			isa = PBXGroup;
+			children = (
+				35D38C0619261E1600DD2B9D /* TotoroDriver */,
+				35D38C2519261E1600DD2B9D /* TotoroDriverTests */,
+				35D38BFF19261E1600DD2B9D /* Frameworks */,
+				35D38BFE19261E1600DD2B9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		35D38BFE19261E1600DD2B9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35D38BFD19261E1600DD2B9D /* TotoroDriver.app */,
+				35D38C1E19261E1600DD2B9D /* TotoroDriverTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35D38BFF19261E1600DD2B9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35D38C0019261E1600DD2B9D /* Foundation.framework */,
+				35D38C0219261E1600DD2B9D /* CoreGraphics.framework */,
+				35D38C0419261E1600DD2B9D /* UIKit.framework */,
+				35D38C1F19261E1600DD2B9D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35D38C0619261E1600DD2B9D /* TotoroDriver */ = {
+			isa = PBXGroup;
+			children = (
+				35D38C0F19261E1600DD2B9D /* CCAppDelegate.h */,
+				35D38C1019261E1600DD2B9D /* CCAppDelegate.m */,
+				35D38C1219261E1600DD2B9D /* Main.storyboard */,
+				35D38C1519261E1600DD2B9D /* CCViewController.h */,
+				35D38C1619261E1600DD2B9D /* CCViewController.m */,
+				35D38C1819261E1600DD2B9D /* Images.xcassets */,
+				35D38C0719261E1600DD2B9D /* Supporting Files */,
+			);
+			path = TotoroDriver;
+			sourceTree = "<group>";
+		};
+		35D38C0719261E1600DD2B9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35D38C0819261E1600DD2B9D /* TotoroDriver-Info.plist */,
+				35D38C0919261E1600DD2B9D /* InfoPlist.strings */,
+				35D38C0C19261E1600DD2B9D /* main.m */,
+				35D38C0E19261E1600DD2B9D /* TotoroDriver-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35D38C2519261E1600DD2B9D /* TotoroDriverTests */ = {
+			isa = PBXGroup;
+			children = (
+				35D38C2B19261E1600DD2B9D /* TotoroDriverTests.m */,
+				35D38C2619261E1600DD2B9D /* Supporting Files */,
+			);
+			path = TotoroDriverTests;
+			sourceTree = "<group>";
+		};
+		35D38C2619261E1600DD2B9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35D38C2719261E1600DD2B9D /* TotoroDriverTests-Info.plist */,
+				35D38C2819261E1600DD2B9D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35D38BFC19261E1600DD2B9D /* TotoroDriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35D38C2F19261E1600DD2B9D /* Build configuration list for PBXNativeTarget "TotoroDriver" */;
+			buildPhases = (
+				35D38BF919261E1600DD2B9D /* Sources */,
+				35D38BFA19261E1600DD2B9D /* Frameworks */,
+				35D38BFB19261E1600DD2B9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TotoroDriver;
+			productName = TotoroDriver;
+			productReference = 35D38BFD19261E1600DD2B9D /* TotoroDriver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		35D38C1D19261E1600DD2B9D /* TotoroDriverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35D38C3219261E1600DD2B9D /* Build configuration list for PBXNativeTarget "TotoroDriverTests" */;
+			buildPhases = (
+				35D38C1A19261E1600DD2B9D /* Sources */,
+				35D38C1B19261E1600DD2B9D /* Frameworks */,
+				35D38C1C19261E1600DD2B9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35D38C2419261E1600DD2B9D /* PBXTargetDependency */,
+			);
+			name = TotoroDriverTests;
+			productName = TotoroDriverTests;
+			productReference = 35D38C1E19261E1600DD2B9D /* TotoroDriverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35D38BF519261E1600DD2B9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CC;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ChenCheng;
+				TargetAttributes = {
+					35D38C1D19261E1600DD2B9D = {
+						TestTargetID = 35D38BFC19261E1600DD2B9D;
+					};
+				};
+			};
+			buildConfigurationList = 35D38BF819261E1600DD2B9D /* Build configuration list for PBXProject "TotoroDriver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 35D38BF419261E1600DD2B9D;
+			productRefGroup = 35D38BFE19261E1600DD2B9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35D38BFC19261E1600DD2B9D /* TotoroDriver */,
+				35D38C1D19261E1600DD2B9D /* TotoroDriverTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35D38BFB19261E1600DD2B9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D38C1919261E1600DD2B9D /* Images.xcassets in Resources */,
+				35D38C0B19261E1600DD2B9D /* InfoPlist.strings in Resources */,
+				35D38C1419261E1600DD2B9D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35D38C1C19261E1600DD2B9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D38C2A19261E1600DD2B9D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35D38BF919261E1600DD2B9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D38C1119261E1600DD2B9D /* CCAppDelegate.m in Sources */,
+				35D38C0D19261E1600DD2B9D /* main.m in Sources */,
+				35D38C1719261E1600DD2B9D /* CCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35D38C1A19261E1600DD2B9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D38C2C19261E1600DD2B9D /* TotoroDriverTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35D38C2419261E1600DD2B9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35D38BFC19261E1600DD2B9D /* TotoroDriver */;
+			targetProxy = 35D38C2319261E1600DD2B9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		35D38C0919261E1600DD2B9D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35D38C0A19261E1600DD2B9D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		35D38C1219261E1600DD2B9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35D38C1319261E1600DD2B9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		35D38C2819261E1600DD2B9D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35D38C2919261E1600DD2B9D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		35D38C2D19261E1600DD2B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		35D38C2E19261E1600DD2B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35D38C3019261E1600DD2B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TotoroDriver/TotoroDriver-Prefix.pch";
+				INFOPLIST_FILE = "TotoroDriver/TotoroDriver-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		35D38C3119261E1600DD2B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TotoroDriver/TotoroDriver-Prefix.pch";
+				INFOPLIST_FILE = "TotoroDriver/TotoroDriver-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		35D38C3319261E1600DD2B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TotoroDriver.app/TotoroDriver";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TotoroDriver/TotoroDriver-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TotoroDriverTests/TotoroDriverTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		35D38C3419261E1600DD2B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TotoroDriver.app/TotoroDriver";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TotoroDriver/TotoroDriver-Prefix.pch";
+				INFOPLIST_FILE = "TotoroDriverTests/TotoroDriverTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35D38BF819261E1600DD2B9D /* Build configuration list for PBXProject "TotoroDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35D38C2D19261E1600DD2B9D /* Debug */,
+				35D38C2E19261E1600DD2B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35D38C2F19261E1600DD2B9D /* Build configuration list for PBXNativeTarget "TotoroDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35D38C3019261E1600DD2B9D /* Debug */,
+				35D38C3119261E1600DD2B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		35D38C3219261E1600DD2B9D /* Build configuration list for PBXNativeTarget "TotoroDriverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35D38C3319261E1600DD2B9D /* Debug */,
+				35D38C3419261E1600DD2B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 35D38BF519261E1600DD2B9D /* Project object */;
+}
