@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35314072192DDB70003A49F8 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35314071192DDB70003A49F8 /* SettingViewController.m */; };
 		35D38C0119261E1600DD2B9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D38C0019261E1600DD2B9D /* Foundation.framework */; };
 		35D38C0319261E1600DD2B9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D38C0219261E1600DD2B9D /* CoreGraphics.framework */; };
 		35D38C0519261E1600DD2B9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D38C0419261E1600DD2B9D /* UIKit.framework */; };
@@ -14,7 +15,7 @@
 		35D38C0D19261E1600DD2B9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D38C0C19261E1600DD2B9D /* main.m */; };
 		35D38C1119261E1600DD2B9D /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D38C1019261E1600DD2B9D /* CCAppDelegate.m */; };
 		35D38C1419261E1600DD2B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D38C1219261E1600DD2B9D /* Main.storyboard */; };
-		35D38C1719261E1600DD2B9D /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D38C1619261E1600DD2B9D /* CCViewController.m */; };
+		35D38C1719261E1600DD2B9D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D38C1619261E1600DD2B9D /* MainViewController.m */; };
 		35D38C1919261E1600DD2B9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D38C1819261E1600DD2B9D /* Images.xcassets */; };
 		35D38C2019261E1600DD2B9D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D38C1F19261E1600DD2B9D /* XCTest.framework */; };
 		35D38C2119261E1600DD2B9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D38C0019261E1600DD2B9D /* Foundation.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35314070192DDB70003A49F8 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		35314071192DDB70003A49F8 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		35D38BFD19261E1600DD2B9D /* TotoroDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TotoroDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D38C0019261E1600DD2B9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		35D38C0219261E1600DD2B9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,8 +48,8 @@
 		35D38C0F19261E1600DD2B9D /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
 		35D38C1019261E1600DD2B9D /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
 		35D38C1319261E1600DD2B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		35D38C1519261E1600DD2B9D /* CCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
-		35D38C1619261E1600DD2B9D /* CCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
+		35D38C1519261E1600DD2B9D /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		35D38C1619261E1600DD2B9D /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		35D38C1819261E1600DD2B9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		35D38C1E19261E1600DD2B9D /* TotoroDriverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TotoroDriverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D38C1F19261E1600DD2B9D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -79,6 +82,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3531406F192DCDE2003A49F8 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				35D38C1519261E1600DD2B9D /* MainViewController.h */,
+				35D38C1619261E1600DD2B9D /* MainViewController.m */,
+				35314070192DDB70003A49F8 /* SettingViewController.h */,
+				35314071192DDB70003A49F8 /* SettingViewController.m */,
+			);
+			name = "Main View";
+			sourceTree = "<group>";
+		};
 		35D38BF419261E1600DD2B9D = {
 			isa = PBXGroup;
 			children = (
@@ -115,8 +129,7 @@
 				35D38C0F19261E1600DD2B9D /* CCAppDelegate.h */,
 				35D38C1019261E1600DD2B9D /* CCAppDelegate.m */,
 				35D38C1219261E1600DD2B9D /* Main.storyboard */,
-				35D38C1519261E1600DD2B9D /* CCViewController.h */,
-				35D38C1619261E1600DD2B9D /* CCViewController.m */,
+				3531406F192DCDE2003A49F8 /* Main View */,
 				35D38C1819261E1600DD2B9D /* Images.xcassets */,
 				35D38C0719261E1600DD2B9D /* Supporting Files */,
 			);
@@ -252,7 +265,8 @@
 			files = (
 				35D38C1119261E1600DD2B9D /* CCAppDelegate.m in Sources */,
 				35D38C0D19261E1600DD2B9D /* main.m in Sources */,
-				35D38C1719261E1600DD2B9D /* CCViewController.m in Sources */,
+				35D38C1719261E1600DD2B9D /* MainViewController.m in Sources */,
+				35314072192DDB70003A49F8 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +471,7 @@
 				35D38C3119261E1600DD2B9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35D38C3219261E1600DD2B9D /* Build configuration list for PBXNativeTarget "TotoroDriverTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +480,7 @@
 				35D38C3419261E1600DD2B9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
