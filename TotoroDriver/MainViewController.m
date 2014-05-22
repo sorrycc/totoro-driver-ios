@@ -57,6 +57,7 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     NSLog(@"start load");
+    [_labor stringByEvaluatingJavaScriptFromString:@"window.alert = function() {};"];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
