@@ -19,6 +19,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Set custom useragent
+    NSString *userAgent = [NSString stringWithFormat:@"ios/%@ webview for totora", [UIDevice currentDevice].systemVersion];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:userAgent, @"UserAgent", nil];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
+    
     [self openTotora];
 }
 
