@@ -13,6 +13,7 @@
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIWebView *labor;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (strong, nonatomic) IBOutlet SocketIO *socketIO;
 
 @end
 
@@ -27,15 +28,17 @@
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:userAgent, @"UserAgent", nil];
     [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
     
+    // Calculate cpu load intervally
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(checkCPU) userInfo:nil repeats:YES];
-    
-    [self openTotora];
+
+    // Init socketio connection
+    [self setSocketIO:[[SocketIO alloc] initWithDelegate:self]];
+    [_socketIO connectToHost:@"server.totorojs.org" onPort:9999 withParams:nil withNamespace:@"/__labor"];
 }
-     
+
 - (void)checkCPU
 {
-    NSLog(@"check cpu: %f", cpu_usage());
-    
+//    NSLog(@"check cpu: %f", cpu_usage());
     [_statusLabel setText:[NSString stringWithFormat:@"CPU Usage: %.1f", cpu_usage()]];
 }
 
@@ -45,15 +48,14 @@
     NSLog(@"memory warning");
 }
 
-- (void) openTotora {
-    NSURL *url = [NSURL URLWithString:@"http://server.totorojs.org:9999/"];
-//    NSURL *url = [NSURL URLWithString:@"http://localhost/_work/Projects/totorojs-ios-driver-test/totoro.html"];
+- (void) openURL: (NSString *)urlString {
+    NSURL *url = [NSURL URLWithString:urlString];
     [_labor loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 
 #pragma mark -
-#pragma mark Delegates
+#pragma mark WebView Delegates
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     NSLog(@"%@", error);
@@ -73,6 +75,50 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     NSLog(@"finish load");
     [_labor stringByEvaluatingJavaScriptFromString:@"document.body.style.background='#E0EAF1';"];
+}
+
+
+#pragma mark -
+#pragma mark SocketIO Delegates
+
+- (void) socketIODidConnect:(SocketIO *)socket {
+    NSLog(@"socketio connected");
+    NSDictionary *ua = @{@"device": @{@"name":@"ios"}, @"os":@{@"name":@"ios", @"version":@"7.0"}, @"browser":@{@"name":@"iossafari", @"version":@"6.1"}};
+    [_socketIO sendEvent:@"init" withData:ua];
+}
+
+- (void) socketIO:(SocketIO *)socket onError:(NSError *)error {
+    NSLog(@"error: %@", error);
+}
+
+- (void) socketIODidDisconnect:(SocketIO *)socket disconnectedWithError:(NSError *)error {
+    NSLog(@"disconnect error: %@", error);
+}
+
+- (void) socketIO:(SocketIO *)socket didReceiveEvent:(SocketIOPacket *)packet
+{
+    NSDictionary *data = [packet.args objectAtIndex:0];
+    
+    if (!data) {
+        return;
+    }
+
+    if (![packet.type isEqual: @"event"]) {
+        return;
+    }
+
+//    NSString *key = [NSString stringWithFormat:@"%@-%@",
+//                     [data objectForKey:@"orderId"],
+//                     [data objectForKey:@"laborId"]];
+    
+    if ([packet.name isEqual: @"add"]) {
+        NSLog(@"url: %@", [data objectForKey:@"url"]);
+        [self openURL:[data objectForKey:@"url"]];
+    }
+    
+    else if ([packet.name isEqualToString:@"remove"]) {
+        [self openURL:@"about:blank"];
+    }
 }
 
 #pragma mark -

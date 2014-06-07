@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <socket.IO/SocketIO.h>
+#import <socket.IO/SocketIOPacket.h>
 
-@interface MainViewController : UIViewController<UIWebViewDelegate>
+@interface MainViewController : UIViewController<UIWebViewDelegate, SocketIODelegate>
 
 @end
