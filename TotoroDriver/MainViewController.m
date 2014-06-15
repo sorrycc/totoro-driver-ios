@@ -24,9 +24,9 @@
     [super viewDidLoad];
     
     // Set custom useragent
-    NSString *userAgent = [NSString stringWithFormat:@"ios/%@ webview for totora", [UIDevice currentDevice].systemVersion];
-    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:userAgent, @"UserAgent", nil];
-    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
+//    NSString *userAgent = [NSString stringWithFormat:@"ios/%@ webview for totora", [UIDevice currentDevice].systemVersion];
+//    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:userAgent, @"UserAgent", nil];
+//    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
     
     // Calculate cpu load intervally
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(checkCPU) userInfo:nil repeats:YES];
@@ -83,7 +83,8 @@
 
 - (void) socketIODidConnect:(SocketIO *)socket {
     NSLog(@"socketio connected");
-    NSDictionary *ua = @{@"device": @{@"name":@"ios"}, @"os":@{@"name":@"ios", @"version":@"7.0"}, @"browser":@{@"name":@"iossafari", @"version":@"6.1"}};
+    NSString *safariVersion = [_labor stringByEvaluatingJavaScriptFromString:@"navigator.userAgent.match(/AppleWebKit\\/(\\d+?)\\./)[1]/100"];
+    NSDictionary *ua = @{@"device": @{@"name":@"ios"}, @"os":@{@"name":@"ios", @"version":[UIDevice currentDevice].systemVersion}, @"browser":@{@"name":@"iossafari", @"version":safariVersion}};
     [_socketIO sendEvent:@"init" withData:ua];
 }
 
