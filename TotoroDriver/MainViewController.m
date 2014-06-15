@@ -83,6 +83,9 @@
 
 - (void) socketIODidConnect:(SocketIO *)socket {
     NSLog(@"socketio connected");
+    
+    [_labor stringByEvaluatingJavaScriptFromString:@"document.body.style.background='#E0EAF1';"];
+    
     NSString *safariVersion = [_labor stringByEvaluatingJavaScriptFromString:@"navigator.userAgent.match(/AppleWebKit\\/(\\d+?)\\./)[1]/100"];
     NSDictionary *ua = @{@"device": @{@"name":@"ios"}, @"os":@{@"name":@"ios", @"version":[UIDevice currentDevice].systemVersion}, @"browser":@{@"name":@"iossafari", @"version":safariVersion}};
     [_socketIO sendEvent:@"init" withData:ua];
@@ -90,6 +93,7 @@
 
 - (void) socketIO:(SocketIO *)socket onError:(NSError *)error {
     NSLog(@"error: %@", error);
+    [_labor stringByEvaluatingJavaScriptFromString:@"document.body.style.background='red';"];
 }
 
 - (void) socketIODidDisconnect:(SocketIO *)socket disconnectedWithError:(NSError *)error {
