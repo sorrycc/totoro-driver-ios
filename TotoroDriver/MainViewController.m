@@ -33,7 +33,15 @@
 
     // Init socketio connection
     [self setSocketIO:[[SocketIO alloc] initWithDelegate:self]];
+    [self connect];
+}
+
+- (void)connect {
     [_socketIO connectToHost:@"server.totorojs.org" onPort:9999 withParams:nil withNamespace:@"/__labor"];
+}
+
+- (void)delayConnect {
+    [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(connect) userInfo:nil repeats:NO];
 }
 
 - (void)checkCPU
@@ -94,10 +102,13 @@
 - (void) socketIO:(SocketIO *)socket onError:(NSError *)error {
     NSLog(@"error: %@", error);
     [_labor stringByEvaluatingJavaScriptFromString:@"document.body.style.background='red';"];
+    [self delayConnect];
 }
 
 - (void) socketIODidDisconnect:(SocketIO *)socket disconnectedWithError:(NSError *)error {
     NSLog(@"disconnect error: %@", error);
+    [_labor stringByEvaluatingJavaScriptFromString:@"document.body.style.background='blue';"];
+    [self delayConnect];
 }
 
 - (void) socketIO:(SocketIO *)socket didReceiveEvent:(SocketIOPacket *)packet
